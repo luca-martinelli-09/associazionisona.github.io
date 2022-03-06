@@ -1,0 +1,23 @@
+{
+  "name": "lm-website",
+  "version": "1.0.0",
+  "description": "Luca Martinelli's new website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luca-martinelli-09/lm-website.git"
+  },
+  "author": "Luca Martinelli",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/luca-martinelli-09/lm-website/issues"
+  },
+  "homepage": "https://github.com/luca-martinelli-09/lm-website#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}

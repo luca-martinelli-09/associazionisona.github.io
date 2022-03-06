@@ -1,1 +1,124 @@
-Hello World
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luca Martinelli</title>
+    <meta name="description" content="Ciao, sono Luca. Sono nato a Verona nel 1998, e le mie due più grandi passioni sono la musica e l'informatica. Sono laureato in Ingegneria dell'Informazione presso l'Università degli Studi di Padova, e attualmente sto proseguendo gli studi in Ingegneria Informatica.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js"
+        }
+      }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#chi-sono">Chi sono</a>
+        </nav>
+        <div class="header-title">
+            <h1 class="text-7xl lg:text-9xl">Luca Martinelli</h1>
+            <h2 class="text-4xl lg:text-7xl text-green-300 mt-3">Web Developer</h2>
+
+            <div class="font-bold grid gap-5 grid-flow-col auto-cols-min align-middle content-center mt-10 ml-3">
+                <a href="https://www.instagram.com/luca.martinelli.09" class="text-xl" target="_blank">
+                    <i class="inline fab fa-instagram fa-lg mr-3 text-pink-300"></i>
+                    <span
+                        class="text-gradient bg-gradient-to-r from-yellow-300 via-red-300 to-purple-200 hidden">luca.martinelli.09</span>
+                </a>
+                <a href="https://www.linkedin.com/in/luca-martinelli/" class="text-xl" target="_blank">
+                    <i class="inline fab fa-linkedin-in fa-lg mr-3 text-blue-300"></i>
+                    <span class="text-blue-300 hidden">luca-martinelli</span>
+                </a>
+                <a href="https://github.com/luca-martinelli-09" class="text-xl" target="_blank">
+                    <i class="inline fab fa-github fa-lg mr-3 text-white"></i>
+                    <span class="text-white hidden">luca-martinelli-09</span>
+                </a>
+                <a href="https://play.google.com/store/apps/dev?id=7837705184499887789" class="text-xl" target="_blank">
+                    <i class="inline fab fa-google-play fa-lg mr-3 text-blue-200"></i>
+                    <span class="text-blue-200 hidden">Google Play Store</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <a href="#content" class="scroll-tip">
+                <span class="scroll-pill"></span>
+                <span class="mt-3">Scorri</span>
+            </a>
+        </div>
+    </header>
+    <a name="content"></a>
+
+    <a name="chi-sono"></a>
+    <section>
+        <h3 class="section-title">Chi sono</h3>
+        <p class="w-full lg:w-2/3 xl:w-1/2">
+            Ciao, sono Luca. Sono nato a Verona nel 1998, e le mie due più grandi passioni sono la musica e
+            l'informatica.<br>
+            Sono laureato in <a class="link" href="https://bestr.it/award/show/983f5rFeRzyeA3slIbskjA?ln=it"
+                target="_blank" rel="noopener noreferrer">Ingegneria dell'Informazione</a> presso l'Università degli
+            Studi di Padova, e attualmente sto proseguendo gli studi in Ingegneria Informatica.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-5">
+            <a href="#" class="button">Scarica il CV</a>
+        </div>
+    </section>
+
+    <a name="portfolio"></a>
+    <div id="sections">
+        <div v-for="section in sections">
+            <a :name="section.id"></a>
+            <section>
+                <h3 class="section-title">{{ section.title }}</h3>
+
+                <div class="card-container">
+                    <div class="card" v-for="element in section.elements">
+                        <div class="card-image">
+                            <img :src="element.imageUrl" :alt="element.imageDescription">
+                        </div>
+                        <h4 class="card-title">
+                            <a :href="element.url" target="_blank" rel="noopener noreferrer">
+                                <span></span>{{ element.title }}
+                            </a>
+                        </h4>
+                        <p class="card-content">{{ element.description }}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            Questo sito non utilizza cookie di profilazione, ma si avvale di cookie tecnici necessari al suo
+            funzionamento.
+            Navigando nel sito si acconsente all' uso dei cookie.
+        </p>
+        <p>
+            Questo sito non raccoglie alcun tipo di dato.
+        </p>
+    </footer>
+
+    <script type="module">
+        import { createApp } from 'vue'
+        import App from './js/App.js'
+
+        const app = createApp(App)
+        app.mount('#sections')
+    </script>
+</body>
+
+</html>
