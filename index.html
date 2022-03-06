@@ -110,9 +110,9 @@
             <section>
                 <h3 class="section-title">{{ section.title }}</h3>
 
-                <div class="card-container">
+                <div class="card-container" :style="section.noGrid ? 'grid-template-columns: none;' : ''">
                     <div class="card" v-for="element in section.elements">
-                        <div class="card-image">
+                        <div v-if="element.imageUrl" class="card-image">
                             <img :src="element.imageUrl" :alt="element.imageDescription">
                         </div>
                         <h4 class="card-title">

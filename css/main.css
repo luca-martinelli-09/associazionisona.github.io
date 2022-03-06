@@ -517,6 +517,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-auto-flow: column;
 }
 
+.grid-cols-none{
+  grid-template-columns: none;
+}
+
 .flex-wrap{
   flex-wrap: wrap;
 }

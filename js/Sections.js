@@ -112,5 +112,17 @@ export default {
         },
       ],
     },
+    {
+      id: "pubblicazioni",
+      noGrid: true,
+      title: "Pubblicazioni",
+      elements: [
+        {
+          title: "Development of an IR System for Argument Search",
+          description: "CEUR Workshop Proceedings (CEUR-WS.org)",
+          url: "http://ceur-ws.org/Vol-2936/paper-208.pdf",
+        },
+      ],
+    },
   ],
 };
