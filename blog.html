@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="google-site-verification" content="oia5Z_AI19pkKxDee5pjXmy7T_PSDNN5wvkC2go3O84" />
+
+    <title>Luca Martinelli</title>
+    <meta name="author" content="Luca Martinelli">
+    <meta name="description"
+        content="Ciao, sono Luca. Sono nato a Verona nel 1998, e le mie due più grandi passioni sono la musica e l'informatica. Sono laureato in Ingegneria dell'Informazione presso l'Università degli Studi di Padova, e attualmente sto proseguendo gli studi in Ingegneria Informatica.">
+    <meta name="keywords"
+        content="martinelli,luca,sites,web,designer,blog,wordpress,playstore,profile,music,insider,dentrolatecnologia,instagram,facebook">
+
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <meta property="og:title" content="Luca Martinelli">
+    <meta property="og:description"
+        content="Ciao, sono Luca. Sono nato a Verona nel 1998, e le mie due più grandi passioni sono la musica e l'informatica. Sono laureato in Ingegneria dell'Informazione presso l'Università degli Studi di Padova, e attualmente sto proseguendo gli studi in Ingegneria Informatica.">
+    <meta property="og:image" content="https://lucamartinelli.eu.org/luca.martinelli.png'; ?>">
+    <meta property="og:url"
+        content="Ciao, sono Luca. Sono nato a Verona nel 1998, e le mie due più grandi passioni sono la musica e l'informatica. Sono laureato in Ingegneria dell'Informazione presso l'Università degli Studi di Padova, e attualmente sto proseguendo gli studi in Ingegneria Informatica.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:site_name" content="Luca Martinelli">
+    <meta name="twitter:image:alt"
+        content="Ciao, sono Luca. Sono nato a Verona nel 1998, e le mie due più grandi passioni sono la musica e l'informatica. Sono laureato in Ingegneria dell'Informazione presso l'Università degli Studi di Padova, e attualmente sto proseguendo gli studi in Ingegneria Informatica.">
+
+    <meta name="twitter:site" content="@LucaMartinelli0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <header class="min-h-0">
+        <nav class="mb-5">
+            <a href="/#chi-sono">Chi sono</a>
+            <a href="/#portfolio">Portfolio</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <div id="blog">
+        <section v-if="articles">
+            <h3 class="section-title">Articoli</h3>
+
+            <div class="card-container" style="grid-template-columns: none;">
+                <div class="card" v-if="articles.length <= 0">
+                    <h4 class="card-title">Nessun articolo</h4>
+                </div>
+                <div class="card" v-for="article in articles">
+                    <h4 class="card-title">
+                        <a :href="'blog.html?id=' + article.id">
+                            <span></span>{{ article.title }}
+                        </a>
+                    </h4>
+                    <p class="card-content">- pag. {{ article.id }}</p>
+                </div>
+            </div>
+        </section>
+        <section v-else>
+            <h1 class="section-title sm:mb-3">{{ article.title }}</h1>
+            <h5 class="text-sm opacity-75 mb-10 lg:mb-20">-- pag. {{ article.id }}, {{ article.data }}</h5>
+            <article class="blog">
+                <vue-showdown :markdown="article.text" />
+            </article>
+            <h5 class="text-sm opacity-75 mt-10 lg:mt-20">{{ article.data }}</h5>
+        </section>
+    </div>
+
+    <footer>
+        <p>
+            Questo sito non utilizza cookie di profilazione, ma si avvale di cookie tecnici necessari al suo
+            funzionamento.
+            Navigando nel sito si acconsente all'uso dei cookie.
+        </p>
+        <p>
+            Questo sito non raccoglie alcun tipo di dato.
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/vue/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="https://unpkg.com/vue-showdown/dist/vue-showdown.min.js"></script>
+
+    <script type="module">
+        import App from './js/Blog.js'
+
+        const app = Vue.createApp(App);
+        app.use(VueShowdownPlugin, {
+            flavor: 'github',
+            options: {
+                emoji: true,
+            },
+        });
+
+        app.mount('#blog')
+    </script>
+</body>
+
+</html>

@@ -38,21 +38,14 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="css/main.css" />
-
-    <script type="importmap">
-      {
-        "imports": {
-          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js"
-        }
-      }
-    </script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="#portfolio">Portfolio</a>
             <a href="#chi-sono">Chi sono</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="blog.html">Blog</a>
         </nav>
         <div class="header-title">
             <h1 class="text-7xl lg:text-9xl">Luca Martinelli</h1>
@@ -138,11 +131,12 @@
         </p>
     </footer>
 
+    <script src="https://unpkg.com/vue/dist/vue.global.prod.js"></script>
+
     <script type="module">
-        import { createApp } from 'vue'
         import App from './js/App.js'
 
-        const app = createApp(App)
+        const app = Vue.createApp(App)
         app.mount('#sections')
     </script>
 </body>
