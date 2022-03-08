@@ -128,7 +128,8 @@
             Navigando nel sito si acconsente all'uso dei cookie.
         </p>
         <p>
-            Questo sito non raccoglie alcun tipo di dato. <a class="link" href="blog.html?id=0">Informativa sulla privacy</a>.
+            Questo sito non raccoglie alcun tipo di dato. <a class="link" href="blog.html?id=0">Informativa sulla
+                privacy</a>.
         </p>
     </footer>
 
@@ -139,6 +140,16 @@
 
         const app = Vue.createApp(App)
         app.mount('#sections')
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NG73ZSQS6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2NG73ZSQS6', { 'anonymize_ip': true });
     </script>
 </body>
 
