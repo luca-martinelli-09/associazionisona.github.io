@@ -1,4 +1,4 @@
-import privacy from "../blog/privacy.js";
+import privacy from "https://lucamartinelli.eu.org/blog/privacy.js";
 
 const articles = [
   {
@@ -10,8 +10,9 @@ const articles = [
 
 export default {
   data() {
-    let urlParams = new URLSearchParams(window.location.search);
-    let id = urlParams.has("id") ? parseInt(urlParams.get("id")) : null;
+    let urlSplit = document.location.href.split("/");
+    let lastParam = urlSplit[urlSplit.length - 1];
+    let id = Number.isInteger(lastParam) ? parseInt(lastParam) : null;
     let article = null;
 
     if (id != null) {
