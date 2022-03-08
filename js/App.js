@@ -1,4 +1,4 @@
-import Sections from "https://lucamartinelli.eu.org/Sections.js";
+import Sections from "https://lucamartinelli.eu.org/js/Sections.js";
 
 export default {
   data() {
