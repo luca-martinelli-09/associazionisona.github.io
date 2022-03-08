@@ -15,8 +15,6 @@ export default {
     let id = !isNaN(lastParam) ? parseInt(lastParam) : null;
     let article = null;
 
-    console.log(id)
-
     if (id != null) {
       article = articles.find((article) => article.id === id);
     }
