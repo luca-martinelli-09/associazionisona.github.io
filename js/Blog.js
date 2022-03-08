@@ -1,4 +1,12 @@
-const articles = [];
+import privacy from "../blog/privacy.js";
+
+const articles = [
+  {
+    id: 0,
+    hide: true,
+    ...privacy,
+  },
+];
 
 export default {
   data() {
@@ -17,10 +25,12 @@ export default {
     }
 
     return {
-      articles: articles.map((article) => ({
-        id: article.id,
-        title: article.title,
-      })),
+      articles: articles
+        .filter((article) => article.hide ? !article.hide : true)
+        .map((article) => ({
+          id: article.id,
+          title: article.title,
+        })),
     };
   },
 };

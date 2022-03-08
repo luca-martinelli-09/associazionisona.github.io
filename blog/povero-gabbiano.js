@@ -8,7 +8,7 @@ Bene
 const article = {
   title: title,
   data: data,
-  text: text,
+  text: text.trim(),
 };
 
 export default article;

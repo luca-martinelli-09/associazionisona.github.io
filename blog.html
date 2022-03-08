@@ -70,7 +70,7 @@
         </section>
         <section v-else>
             <h1 class="section-title sm:mb-3">{{ article.title }}</h1>
-            <h5 class="text-sm opacity-75 mb-10 lg:mb-20">-- pag. {{ article.id }}, {{ article.data }}</h5>
+            <h5 class="text-sm opacity-75 mb-10 lg:mb-20">-- pag. {{ article.id }}</h5>
             <article class="blog">
                 <vue-showdown :markdown="article.text" />
             </article>
@@ -85,7 +85,7 @@
             Navigando nel sito si acconsente all'uso dei cookie.
         </p>
         <p>
-            Questo sito non raccoglie alcun tipo di dato.
+            Questo sito non raccoglie alcun tipo di dato. <a class="link" href="blog.html?id=0">Informativa sulla privacy</a>.
         </p>
     </footer>
 
