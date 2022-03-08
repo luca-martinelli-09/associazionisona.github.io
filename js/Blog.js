@@ -12,7 +12,7 @@ export default {
   data() {
     let urlSplit = document.location.href.split("/");
     let lastParam = urlSplit[urlSplit.length - 1];
-    let id = Number.isInteger(lastParam) ? parseInt(lastParam) : null;
+    let id = !isNaN(lastParam) ? parseInt(lastParam) : null;
     let article = null;
 
     if (id != null) {
