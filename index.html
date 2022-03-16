@@ -35,11 +35,18 @@
         content="Ciao, sono Luca. Sono nato a Verona nel 1998, e le mie due più grandi passioni sono la musica e l'informatica. Sono laureato in Ingegneria dell'Informazione presso l'Università degli Studi di Padova, e attualmente sto proseguendo gli studi in Ingegneria Informatica.">
 
     <meta name="twitter:site" content="@LucaMartinelli0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://lucamartinelli.eu.org/css/main.css" />
+        crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="https://lucamartinelli.eu.org/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="https://lucamartinelli.eu.org/css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" />
+    </noscript>
 </head>
 
 <body>
