@@ -100,7 +100,7 @@ export default {
           imageDescription: "Intesa Vincente",
           description:
             "Web App ispirata al gioco dell'Intesa Vincente di Reazione a Catena.",
-          url: "https://lucamartinelli.eu.org/IntesaVincente",
+          url: "https://intesavincente.lucamartinelli.eu.org/",
         },
         {
           title: "Castoro Catarifrangente Bot",
