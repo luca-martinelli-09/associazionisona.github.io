@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     },
   },
   app: {
+    baseURL: 'https://lucamartinelli.eu.org/',
     head: {
       title: "Luca Martinelli",
       link: [
