@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Instagram Sans Script";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("Instagram Sans Script Regular"), url("Instagram Sans Script.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Instagram Sans Script";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local("Instagram Sans Script Bold"), url("Instagram Sans Script Bold.woff") format("woff");
+}

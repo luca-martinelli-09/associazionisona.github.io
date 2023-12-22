@@ -1,28 +1,22 @@
-module.exports = {
-  purge: {
-    enabled: true,
-    content: ["./*.html"],
-  },
-  darkMode: "media",
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Cascadia Code", "monospace", "ui-monospace"],
-        serif: ["Bitter", "serif", "ui-serif"],
-      },
-      boxShadow: {
-        "offset-white": "3px 3px white",
-      },
-      gridTemplateColumns: {
-        auto: "repeat(auto-fill, minmax(0, 1fr))",
+        sans: ['"Josefin Sans"', ...defaultTheme.fontFamily.sans],
+        display: ['"Instagram Sans Script"', ...defaultTheme.fontFamily.serif]
       }
     },
   },
-  variants: {
-    extend: {
-      ringWidth: ["active"],
-      ringColor: ["active"],
-    },
-  },
   plugins: [],
-};
+}

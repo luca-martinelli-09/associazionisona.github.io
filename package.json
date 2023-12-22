@@ -1,23 +1,29 @@
 {
-  "name": "lm-website",
-  "version": "1.0.0",
-  "description": "Luca Martinelli's new website",
-  "main": "index.js",
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy": "gh-pages -d dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luca-martinelli-09/lm-website.git"
-  },
-  "author": "Luca Martinelli",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/luca-martinelli-09/lm-website/issues"
-  },
-  "homepage": "https://github.com/luca-martinelli-09/lm-website#readme",
-  "devDependencies": {},
-  "dependencies": {
-    "tailwindcss": "^3.0.23"
+  "devDependencies": {
+    "@iconify/vue": "^4.1.1",
+    "@nuxt/devtools": "latest",
+    "@types/animejs": "^3.1.12",
+    "@types/node": "^20.10.5",
+    "animejs": "^3.2.2",
+    "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.1.0",
+    "mitt": "^3.0.1",
+    "nuxt": "^3.8.2",
+    "postcss": "^8.4.32",
+    "swiper": "^11.0.5",
+    "tailwindcss": "^3.4.0",
+    "vue": "^3.3.12",
+    "vue-router": "^4.2.5"
   }
 }

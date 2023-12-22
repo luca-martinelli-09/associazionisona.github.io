@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply relative min-h-screen;
+  @apply bg-neutral-900 text-neutral-50;
+  @apply flex justify-center;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply w-screen;
+
+  background-image: url("~/assets/bg-blob.svg");
+  @apply bg-repeat bg-cover;
+}
+
+main {
+  @apply max-w-screen-2xl min-h-screen p-5;
+  @apply flex flex-col items-center justify-center;
+}
+
+header {
+  @apply z-20 border-b border-neutral-800 py-3 px-5 fixed inset-x-0 top-0 bg-neutral-900;
+}
+
+nav {
+  @apply max-w-screen-2xl mx-auto flex flex-row justify-between items-center;
+}
+
+.iconed {
+  @apply inline-flex flex-row items-center gap-2;
+}
+
+h1 {
+  @apply font-display font-bold;
+  @apply bg-gradient-to-br from-[#FFC0D9] to-[#FFE382];
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  @apply font-bold;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.story-content {
+  @apply absolute inset-0 p-10 pt-14 lg:pt-24 bg-white text-neutral-900;
+}
+
+.story-content h2 {
+  @apply text-4xl mb-5;
+}
+
+.story-content h3,
+.story-content h2 {
+  @apply font-bold;
+}
+
+.story-content .medium {
+  @apply text-4xl lg:text-5xl;
+}
+
+.story-content .small {
+  @apply text-2xl lg:text-3xl;
+}
+
+.story-content .big {
+  @apply text-7xl lg:text-8xl;
+}
+
+.story-content p {
+  @apply text-xl lg:text-2xl;
+}
+
+.story-content .vsmall {
+  @apply text-lg lg:text-xl;
+}
+
+.story-pill-containers {
+  @apply mt-3 flex flex-wrap gap-1;
+}
