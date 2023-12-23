@@ -25,7 +25,7 @@ defineProps({
     <template v-slot:widget>
       <StoryWidget href="https://eventa.sona.eu.org">
         <Icon icon="carbon:link" class="text-blue-600" />
-        <span>Eventa</span>
+        <span>Sito web</span>
       </StoryWidget>
     </template>
 

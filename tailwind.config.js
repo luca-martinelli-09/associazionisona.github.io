@@ -13,10 +13,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Josefin Sans"', ...defaultTheme.fontFamily.sans],
-        display: ['"Instagram Sans Script"', ...defaultTheme.fontFamily.serif]
+        sans: ['"General Sans"', ...defaultTheme.fontFamily.sans],
+        display: ['"Bonny"', ...defaultTheme.fontFamily.serif]
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

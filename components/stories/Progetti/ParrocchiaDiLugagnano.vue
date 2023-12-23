@@ -23,7 +23,7 @@ defineProps({
     <template v-slot:widget>
       <StoryWidget href="https://parrocchiadilugagnano.it">
         <Icon icon="carbon:link" class="text-violet-700" />
-        <span>Parrocchia di Lugagnano</span>
+        <span>Sito web</span>
       </StoryWidget>
     </template>
 

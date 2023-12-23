@@ -1,3 +1,5 @@
+@import url("https://api.fontshare.com/v2/css?f[]=bonny@700,400&f[]=general-sans@701,601,600,401,400,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,7 +8,6 @@ html,
 body {
   @apply relative min-h-screen;
   @apply bg-neutral-900 text-neutral-50;
-  @apply flex justify-center;
 }
 
 * {
@@ -14,14 +15,12 @@ body {
 }
 
 body {
-  @apply w-screen;
-
   background-image: url("~/assets/bg-blob.svg");
   @apply bg-repeat bg-cover;
 }
 
 main {
-  @apply max-w-screen-2xl min-h-screen p-5;
+  @apply max-w-screen-2xl min-h-screen p-5 mx-auto;
   @apply flex flex-col items-center justify-center;
 }
 
@@ -53,11 +52,11 @@ h2 {
 }
 
 .story-content {
-  @apply absolute inset-0 p-10 pt-14 lg:pt-24 bg-white text-neutral-900;
+  @apply absolute inset-0 p-5 sm:p-8 lg:p-10 pt-12 sm:pt-14 lg:pt-24 bg-white text-neutral-900;
 }
 
 .story-content h2 {
-  @apply text-4xl mb-5;
+  @apply text-2xl sm:text-3xl lg:text-4xl mb-5;
 }
 
 .story-content h3,
@@ -66,23 +65,23 @@ h2 {
 }
 
 .story-content .medium {
-  @apply text-4xl lg:text-5xl;
+  @apply text-3xl sm:text-4xl lg:text-5xl;
 }
 
 .story-content .small {
-  @apply text-2xl lg:text-3xl;
+  @apply text-xl sm:text-2xl lg:text-3xl;
 }
 
 .story-content .big {
-  @apply text-7xl lg:text-8xl;
+  @apply text-6xl sm:text-7xl lg:text-8xl;
 }
 
 .story-content p {
-  @apply text-xl lg:text-2xl;
+  @apply text-base sm:text-xl lg:text-2xl;
 }
 
 .story-content .vsmall {
-  @apply text-lg lg:text-xl;
+  @apply text-base sm:text-lg lg:text-xl;
 }
 
 .story-pill-containers {

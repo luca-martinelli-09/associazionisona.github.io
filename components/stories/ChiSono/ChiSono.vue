@@ -21,19 +21,19 @@
 
   <Story>
     <template v-slot:story>
-      <Associations :slide-index="3" />
+      <WorksFirst :slide-index="3" />
     </template>
   </Story>
 
   <Story>
     <template v-slot:story>
-      <WorksFirst :slide-index="4" />
+      <WorksSecond :slide-index="4" />
     </template>
   </Story>
 
   <Story>
     <template v-slot:story>
-      <WorksSecond :slide-index="5" />
+      <Associations :slide-index="5" />
     </template>
   </Story>
 </template>

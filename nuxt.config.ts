@@ -1,13 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  modules: ["@nuxt/content"],
   components: [
     {
       path: "~/components",
       pathPrefix: false,
     },
   ],
-  css: ["~/assets/fonts/josefin-sans/main.css", "~/assets/fonts/instagram-sans-script/main.css", "~/assets/css/main.css"],
+  css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -32,5 +33,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-
 });

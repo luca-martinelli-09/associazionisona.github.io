@@ -23,7 +23,7 @@ defineProps({
     <template v-slot:widget>
       <StoryWidget href="https://dentrolatecnologia.it">
         <Icon icon="carbon:link" class="text-green-600" />
-        <span>INSiDER</span>
+        <span>Sito web</span>
       </StoryWidget>
     </template>
 

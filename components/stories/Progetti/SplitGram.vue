@@ -21,9 +21,9 @@ defineProps({
     </template>
 
     <template v-slot:widget>
-      <StoryWidget href="https://digitalpeople.tech">
+      <StoryWidget href="https://t.me/SplitGram_bot">
         <Icon icon="carbon:link" class="text-blue-600" />
-        <span>Digital People</span>
+        <span>Telegram</span>
       </StoryWidget>
     </template>
 

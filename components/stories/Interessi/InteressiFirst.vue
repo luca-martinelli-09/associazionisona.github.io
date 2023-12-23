@@ -56,7 +56,7 @@ const interests = [
 <template>
   <div class="story-content bg-gradient-to-br from-[#FFE382] to-[#E36414] flex flex-col gap-6 lg:gap-10">
     <div class="transparent flex items-start gap-5" ref="contentRefs" v-for="interest in interests">
-      <Icon :icon="interest.icon" class="text-6xl flex-shrink-0" />
+      <Icon :icon="interest.icon" class="text-4xl sm:text-5xl lg:text-6xl flex-shrink-0" />
       <div class="flex flex-col gap-3">
         <h2 class="medium">
           {{ interest.title }}

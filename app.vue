@@ -29,4 +29,15 @@ import { Icon } from '@iconify/vue';
   </header>
 
   <NuxtPage />
+
+  <footer class="flex flex-col justify-start py-7 px-5 bg-neutral-950 border-t border-neutral-800 text-neutral-300">
+    <div class="mx-auto w-full max-w-screen-2xl">
+      <p>
+        Questo sito non utilizza cookie di profilazione, ma si avvale di cookie tecnici necessari al suo funzionamento.
+      </p>
+      <p>
+        Questo sito non raccoglie alcun tipo di dato. <a href="/privacy" class="font-bold">Leggi l'informativa sulla privacy</a>.
+      </p>
+    </div>
+  </footer>
 </template>
